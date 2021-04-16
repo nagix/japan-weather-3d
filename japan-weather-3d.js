@@ -343,7 +343,7 @@ const himawariMenuBg = document.getElementById('himawari-menu-bg');
 const infoBg = document.getElementById('info-bg');
 const frames = [];
 let current = 36;
-let himawariType = 'b03';
+let himawariType = 'b13';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibmFnaXgiLCJhIjoiY2tuazZkeWFyMDR1YTJwbXB3YndxNjZobyJ9.HMFX0bkfoSMP8aMUWDlz2g';
 const map = new mapboxgl.Map({
