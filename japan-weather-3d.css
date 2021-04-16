@@ -1,0 +1,136 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.map-overlay {
+    font: bold 18px/30px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 300px;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    white-space: nowrap;
+    z-index: 1;
+} 
+.map-overlay .map-overlay-inner {
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.map-overlay label {
+    display: block;
+}
+.map-overlay #slider-tag {
+    padding: 0 4px;
+    border-radius: 4px;
+    color: white;
+    background-color: green;
+    display: inline-block;
+    visibility: hidden;
+    float: right;
+}
+.map-overlay input {
+    background-color: transparent;
+    width: 280px;
+    position: relative;
+    margin: 0;
+    cursor: ew-resize;
+}
+.map-overlay #slider-ticks {
+    display: block;
+    width: 280px;
+    height: 10px;
+    margin: 0;
+}
+#himawari-menu-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);;
+    display: none;
+    z-index: 99;
+}
+#himawari-menu {
+    position: absolute;
+    top: 63px;
+    right: 50px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+#himawari-menu div {
+    font: 14px/26px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    padding: 6px;
+    background-color: transparent;
+    cursor: pointer;
+}
+#himawari-menu div+div {
+    border-top: 1px solid #ddd;
+}
+#himawari-menu div:hover {
+    background-color: rgba(0, 0, 0, .05);
+}
+#himawari-menu div:first-child {
+    border-radius: 4px 4px 0 0;
+}
+#himawari-menu div:last-child {
+    border-radius: 0 0 4px 4px;
+}
+#himawari-menu span {
+    display: inline-block;
+    width: 16px;
+}
+#himawari-menu div.active span::after {
+    content: "\2714";
+}
+#info-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);;
+    display: none;
+    z-index: 99;
+}
+#info {
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    width: 250px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+#legend {
+    position: absolute;
+    width: 50px;
+    height: 120px;
+    bottom: 40px;
+    left: 10px;
+    padding: 10px;
+    background: no-repeat center/50px #fff url(https://www.jma.go.jp/bosai/nowc/images/legend_jp_normal_hrpns.svg);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 1;
+}
+.mapboxgl-ctrl button.mapboxgl-ctrl-himawari .mapboxgl-ctrl-icon {
+    background: no-repeat center/22px url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='%23333' d='M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4z'%3E%3C/path%3E%3C/svg%3E");
+}
+.mapboxgl-ctrl button.mapboxgl-ctrl-info .mapboxgl-ctrl-icon {
+    background: no-repeat center/22px url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23333' d='M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z'%3E%3C/path%3E%3C/svg%3E");
+}

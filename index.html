@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja_JP">
+<head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-39988758-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-39988758-2');
+	</script>
+	<meta charset="utf-8">
+	<title>Japan Weather 3D</title>
+	<meta name="description" content="A real-time 3D weather map of Japan. This data visualization was produced by Akihiko Kusanagi." />
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta property="og:title" content="Japan Weather 3D" />
+	<meta property="og:description" content="A real-time 3D weather map of Japan. This data visualization was produced by Akihiko Kusanagi." />
+	<meta property="og:locale" content="ja_JP" />
+	<link rel="canonical" href="https://nagix.github.io/japan-weather-3d" />
+	<meta property="og:url" content="https://nagix.github.io/japan-weather-3d" />
+	<meta property="og:site_name" content="Japan Weather 3D" />
+	<meta property="og:image" content="https://nagix.github.io/japan-weather-3d/screenshot1.jpg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@nagix" />
+	<link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+	<link href="japan-weather-3d.css" rel="stylesheet">
+	<script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/suncalc/1.8.0/suncalc.min.js"></script>
+</head>
+<body>
+    <div id="map">
+	    <div class="map-overlay top">
+	        <div class="map-overlay-inner">
+	            <label>
+	            	<span id="slider-value"></span>
+	            	<span id="slider-tag">予想</span>
+	            </label>
+	            <input id="slider" type="range" min="0" max="48" step="0" value="36">
+	            <svg id="slider-ticks"></svg>
+	        </div>
+	    </div>
+	    <div id="himawari-menu-bg">
+		    <div id="himawari-menu">
+		    	<div id="b03" class="active"><span></span>可視画像</div>
+		    	<div id="b13"><span></span>赤外画像</div>
+		    	<div id="b08"><span></span>水蒸気画像</div>
+		    	<div id="rep"><span></span>トゥルーカラー再現画像</div>
+		    	<div id="snd"><span></span>雲頂強調画像</div>
+		    </div>
+		</div>
+	    <div id="info-bg">
+	    	<div id="info">
+	    		<h3>Japan Weather 3D について</h3>
+	    		<p>このデータビジュアライゼーションは <a href="https://nagix.github.io" target="_blank">草薙 昭彦</a> により作成されました。本アプリケーションが利用する気象データは、気象庁の <a href="https://www.jma.go.jp/jma/kishou/know/kurashi/highres_nowcast.html" target="_blank">高解像度降水ナウキャスト</a> および <a href="https://www.data.jma.go.jp/sat_info/himawari/satellite.html" target="_blank">気象衛星観測</a> において提供されるものです。</p>
+	    		<p>ソースコードは <a href="https://github.com/nagix/japan-weather-3d" target="_blank">GitHub リポジトリ</a> にて公開されています。</p>
+	    	</div>
+	    </div>
+	    <div id="legend"></div>
+    </div>
+    <script src="japan-weather-3d.js"></script>
+</body>
+</html>
