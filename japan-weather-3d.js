@@ -184,7 +184,7 @@ function initHrpnsLayers(map, frames) {
                     'duration': 0
                 }
             }
-        });
+        }, 'water-boundary-bg');
     }
 }
 
@@ -413,7 +413,9 @@ map.on('load', () => {
 });
 
 map.on('move', e => {
-    setSunPosition(map, frames[current]['hrpns'].validtime);
+    if (frames[current]) {
+        setSunPosition(map, frames[current]['hrpns'].validtime);
+    }
 });
 
 map.on('movestart', e => {
